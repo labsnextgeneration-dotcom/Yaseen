@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaseen Smith Air Conditioning - Cape Town</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-brand {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.postimg.cc/B6tfN2d2/hero-1.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* --- Custom Header Styles --- */
+        #header {
+            transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        #header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        /* Default (transparent) state text colors */
+        #header .header-text-change { color: #ffffff; }
+        #header .contact-button { background-color: #ffffff; color: #2563eb; }
+        #header .contact-button:hover { background-color: #f3f4f6; }
+        #header #mobile-menu-button { color: #ffffff; }
+
+        /* Scrolled state text colors */
+        #header.scrolled .header-text-change { color: #4b5563; }
+        #header.scrolled .header-text-change:hover { color: #2563eb; }
+        #header.scrolled .font-brand { color: #2563eb; }
+        #header.scrolled #mobile-menu-button { color: #1f2937; }
+        #header.scrolled .contact-button { background-color: #2563eb; color: #ffffff; }
+        #header.scrolled .contact-button:hover { background-color: #1d4ed8; }
+        
+        /* Underline effect for nav links */
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #2563eb;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        #header.scrolled .nav-link.active {
+            color: #1d4ed8;
+            font-weight: 600;
+        }
+        #header .nav-link.active {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 w-full z-50 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3">
+                <img src="https://i.postimg.cc/j5dp8yJR/YS-10.png" alt="Yaseen Smith Aircon Logo" class="h-16 w-16 rounded-full object-cover">
+                <span class="text-xl font-bold font-brand header-text-change">Yaseen Smith Aircon</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link header-text-change transition duration-300">Home</a>
+                <a href="#about" class="nav-link header-text-change transition duration-300">About</a>
+                <a href="#services" class="nav-link header-text-change transition duration-300">Services</a>
+                <a href="#gallery" class="nav-link header-text-change transition duration-300">Gallery</a>
+                <a href="#contact" class="contact-button font-bold py-2 px-5 rounded-lg transition duration-300">Contact Us</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 mt-4 bg-white/95 backdrop-blur-sm">
+            <a href="#home" class="block py-2 text-gray-800 hover:text-blue-600 nav-link">Home</a>
+            <a href="#about" class="block py-2 text-gray-800 hover:text-blue-600 nav-link">About</a>
+            <a href="#services" class="block py-2 text-gray-800 hover:text-blue-600 nav-link">Services</a>
+            <a href="#gallery" class="block py-2 text-gray-800 hover:text-blue-600 nav-link">Gallery</a>
+            <a href="#contact" class="block py-2 text-gray-800 hover:text-blue-600 nav-link">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="page hero-bg text-white">
+            <div class="container mx-auto px-6 h-screen flex flex-col items-center justify-center text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Professional Air Conditioning Services in Cape Town</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl">Reliable installation, repairs, and maintenance - keeping you cool all year round.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-lg">Book a Free Quote</a>
+                    <a href="tel:+27000000000" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-lg">Call Us Now: (000) 000-0000</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Bar -->
+        <section class="bg-white">
+            <div class="container mx-auto px-6 py-12">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="feature-item flex flex-col items-center p-4">
+                        <i data-lucide="clock" class="text-blue-600 mb-3 h-10 w-10"></i>
+                        <h3 class="font-semibold text-lg">24/7 Emergency Service</h3>
+                        <p class="text-gray-600 text-sm">Always available for urgent repairs.</p>
+                    </div>
+                    <div class="feature-item flex flex-col items-center p-4">
+                        <i data-lucide="award" class="text-blue-600 mb-3 h-10 w-10"></i>
+                        <h3 class="font-semibold text-lg">10+ Years Experience</h3>
+                        <p class="text-gray-600 text-sm">Expertise you can trust and rely on.</p>
+                    </div>
+                    <div class="feature-item flex flex-col items-center p-4">
+                        <i data-lucide="home" class="text-blue-600 mb-3 h-10 w-10"></i>
+                        <h3 class="font-semibold text-lg">Residential & Commercial</h3>
+                        <p class="text-gray-600 text-sm">Solutions for homes and businesses.</p>
+                    </div>
+                    <div class="feature-item flex flex-col items-center p-4">
+                        <i data-lucide="shield-check" class="text-blue-600 mb-3 h-10 w-10"></i>
+                        <h3 class="font-semibold text-lg">Warranty-Backed Work</h3>
+                        <p class="text-gray-600 text-sm">Peace of mind with our guarantee.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="page py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://i.postimg.cc/Y02QLqVn/team-photo.jpg" alt="Yaseen Smith Air Conditioning Team" class="rounded-lg shadow-xl w-full">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4 text-gray-800">About Yaseen Smith Air Conditioning</h2>
+                        <p class="text-gray-600 mb-6">
+                            Yaseen Smith Air Conditioning is a proud, family-owned business based in the heart of Cape Town. We started with a simple mission: to provide our community with reliable, energy-efficient cooling and heating solutions. We believe in transparency, exceptional service, and building lasting relationships with our clients.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Why Choose Us?</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i data-lucide="map-pin" class="text-blue-600 mr-3 mt-1 h-5 w-5 flex-shrink-0"></i>
+                                <span><span class="font-semibold">Local Cape Town Experts:</span> Deep understanding of local climate needs.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="users" class="text-blue-600 mr-3 mt-1 h-5 w-5 flex-shrink-0"></i>
+                                <span><span class="font-semibold">Fully Qualified Technicians:</span> Trained, certified, and experienced professionals.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="badge-dollar-sign" class="text-blue-600 mr-3 mt-1 h-5 w-5 flex-shrink-0"></i>
+                                <span><span class="font-semibold">Affordable & Transparent Pricing:</span> No hidden fees, just honest quotes.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <i data-lucide="rocket" class="text-blue-600 mr-3 mt-1 h-5 w-5 flex-shrink-0"></i>
+                                <span><span class="font-semibold">Fast Response Times:</span> Quick and efficient service when you need it most.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="page py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-2">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-12">We offer a complete range of air conditioning services to meet your needs.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-left">
+                        <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                            <i data-lucide="air-vent" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Aircon Installation</h3>
+                        <p class="text-gray-600">Customized installation of split, ducted, and multi-split systems for homes, offices, and retail spaces. We ensure a perfect fit for your needs and budget.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-left">
+                         <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                            <i data-lucide="wrench" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Aircon Repairs</h3>
+                        <p class="text-gray-600">Fast diagnosis and repair for all major AC brands. We handle refrigerant leaks, electrical faults, thermostat issues, and emergency breakdowns.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-left">
+                         <div class="bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center mb-6">
+                            <i data-lucide="shield-check" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Preventative Maintenance</h3>
+                        <p class="text-gray-600">Keep your system running efficiently with our tune-ups, including filter cleaning, refrigerant checks, and airflow testing to save you money.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="page py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-2">Our Work Gallery</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-12">A glimpse into some of our successful installations and happy clients.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="group relative overflow-hidden rounded-lg">
+                        <img src="https://i.postimg.cc/XJ9cRPSW/Gemini-Generated-Image-48cmj848cmj848cm.png" alt="Gallery Image 1" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
+                            <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Commercial Installation</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-lg">
+                        <img src="https://i.postimg.cc/pdwJ1HSk/Gemini-Generated-Image-b9cbchb9cbchb9cb.png" alt="Gallery Image 2" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
+                            <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Ducted System</p>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-lg">
+                        <img src="https://i.postimg.cc/ryCNg7NC/Gemini-Generated-Image-c9708bc9708bc970.png" alt="Gallery Image 3" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
+                            <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Residential Unit</p>
+                        </div>
+                    </div>
+                     <div class="group relative overflow-hidden rounded-lg">
+                        <img src="https://i.postimg.cc/qqLcRCvZ/Gemini-Generated-Image-w412czw412czw412.png" alt="Gallery Image 4" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
+                            <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Office Cooling</p>
+                        </div>
+                    </div>
+                     <div class="group relative overflow-hidden rounded-lg">
+                        <img src="https://i.postimg.cc/fyZjDvD9/Gemini-Generated-Image-xxf6nnxxf6nnxxf6.png" alt="Gallery Image 5" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
+                            <p class="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Maintenance Check</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="page py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center">
+                    <h2 class="text-3xl font-bold mb-2">Get In Touch</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto mb-12">Have a question or need a quote? Contact us today. We're here to help!</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                        <form action="#" method="POST">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                             <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Request a Free Quote</button>
+                        </form>
+                    </div>
+                    <!-- Contact Details & Map -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
+                            <ul class="space-y-4 text-lg">
+                                <li class="flex items-center">
+                                    <i data-lucide="map-pin" class="text-blue-600 mr-4 h-6 w-6"></i>
+                                    <span>123 Cool Air St, Cape Town, 8001, SA</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-lucide="phone" class="text-blue-600 mr-4 h-6 w-6"></i>
+                                    <a href="tel:+27000000000" class="hover:text-blue-600">(000) 000-0000</a>
+                                </li>
+                                <li class="flex items-center">
+                                    <i data-lucide="mail" class="text-blue-600 mr-4 h-6 w-6"></i>
+                                    <a href="mailto:info@yaseensmithaircon.co.za" class="hover:text-blue-600">info@yaseensmithaircon.co.za</a>
+                                </li>
+                                 <li class="flex items-center">
+                                    <i data-lucide="clock" class="text-blue-600 mr-4 h-6 w-6"></i>
+                                    <span>Mon - Fri: 8:00 AM - 5:00 PM<br><span class="font-semibold">24/7 for Emergencies</span></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Our Location</h3>
+                             <div class="w-full h-64 bg-gray-200 rounded-lg shadow-md flex items-center justify-center">
+                                <p class="text-gray-500">Google Maps Placeholder</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://i.postimg.cc/j5dp8yJR/YS-10.png" alt="Yaseen Smith Aircon Logo" class="h-12 w-12 rounded-full object-cover">
+                        <h4 class="text-xl font-bold font-brand">Yaseen Smith Aircon</h4>
+                    </div>
+                    <p class="text-gray-400">Your trusted partner for air conditioning solutions in Cape Town. Keeping you comfortable since 2010.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="text-lg font-semibold mb-4">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Installation</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Repairs</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook" class="h-6 w-6"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram" class="h-6 w-6"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="linkedin" class="h-6 w-6"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Yaseen Smith Air Conditioning. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const header = document.getElementById('header');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('header nav a.nav-link');
+        const sections = document.querySelectorAll('section.page');
+
+        // Mobile menu toggle
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const href = this.getAttribute('href');
+                if (href.length > 1) {
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Change header on scroll
+        window.onscroll = function() {
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled', 'py-4');
+                header.classList.remove('py-6');
+            } else {
+                header.classList.remove('scrolled', 'py-4');
+                header.classList.add('py-6');
+            }
+        };
+
+        // Active link highlighting on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+    </script>
+</body>
+</html>
